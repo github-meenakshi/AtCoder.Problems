@@ -1,0 +1,28 @@
+#include <iostream>
+#include <math.h>
+#include <algorithm>
+#include <iomanip>
+#include <set>
+#include <string.h>
+#include <map>
+#include <vector>
+using namespace std;
+int main(){
+    int arr[11];
+    int sum = 1;
+    for(int i = 1;i<=10;i++){
+        sum = sum*i;
+        arr[i] = sum;
+        }
+        //for(int i = 1;i<=10;i++) cout<<arr[i]<<" ";
+        int p,i=10,count=0;
+        cin>>p;
+        while(p>0){
+            if(p>=arr[i]){
+                p = p-arr[i];
+                count++;
+                }
+                else i--;
+            }
+            cout<<count<<endl;
+    }
